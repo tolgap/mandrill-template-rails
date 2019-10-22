@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tolgap/mandrill_rails.svg?branch=master)](https://travis-ci.org/tolgap/mandrill_rails)
+
 # MandrillRails
 Send emails using Mandrill Templates and ActionMailer.
 
