@@ -65,7 +65,9 @@ https://mandrillapp.com/api/1.0/messages/send-template.json
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mandrill_rails'
+source "https://rubygems.pkg.github.com/tolgap" do
+  gem "mandrill_rails", "~> 1.0.0"
+end
 ```
 
 And then execute:
@@ -75,7 +77,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install mandrill_rails
+gem install mandrill_rails --source "https://rubygems.pkg.github.com/tolgap"
 ```
 
 ## Contributing
