@@ -1,9 +1,0 @@
-pipeline:
-  test:
-    image: ruby:2.6
-    commands:
-      - bundle
-      - bundle exec rspec
-    environment:
-      - RAILS_ENV=test
-      - MANDRILL_API_KEY=test
