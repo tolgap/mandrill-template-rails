@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.version     = MandrillRails::VERSION
   spec.authors     = ['Tolga Paksoy']
   spec.email       = ['tolga@paramander.com']
-  spec.homepage    = 'https://mandrillapp.com'
+  spec.homepage    = 'https://github.com/tolgap/mandrill_rails'
   spec.summary     = 'Rails support for Mandrill Templates'
   spec.description = "Send E-mails by leveraging Mandrill's templates. Supports all ActionMailer options."
   spec.license     = 'MIT'
