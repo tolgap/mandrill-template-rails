@@ -84,7 +84,6 @@ gem install mandrill_rails --source "https://rubygems.pkg.github.com/tolgap"
 
 1. Only `global_merge_vars` are supported for now, so only individual emails are supported.
 2. No support for attachments
-3. No support for template content
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

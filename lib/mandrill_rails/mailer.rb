@@ -15,10 +15,13 @@ module MandrillRails
       merge_vars = mail.mandrill_merge_vars.map do |k, v|
         { name: k.to_s, content: v&.to_s }
       end
+      template_content = mail.mandrill_template_content.map do |k, v|
+        { name: k.to_s, content: v&.to_s }
+      end
 
       response = client.messages.send_template(
         template_name,
-        [],
+        template_content,
         {
           to: recipients,
           global_merge_vars: merge_vars

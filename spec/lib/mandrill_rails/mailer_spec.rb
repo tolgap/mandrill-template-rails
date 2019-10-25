@@ -25,11 +25,13 @@ RSpec.describe MandrillRails::Mailer do
 
   describe '.deliver!' do
     let!(:merge_vars) { { test_name: 'test_value' } }
+    let!(:content) { { 'template content name' => 'template content value' } }
     let(:mail) do
       Mail.new do |message|
         message.to 'test1@example.com'
         message.mandrill_template 'test_template'
         message.mandrill_merge_vars merge_vars
+        message.mandrill_template_content content
       end
     end
     let(:response) do
@@ -46,7 +48,7 @@ RSpec.describe MandrillRails::Mailer do
       expect_any_instance_of(Mandrill::Messages).to receive(:send_template)
         .with(
           'test_template',
-          [],
+          [{ name: 'template content name', content: 'template content value' }],
           to: [{ email: 'test1@example.com', type: 'to' }],
           global_merge_vars: [{ name: 'test_name', content: 'test_value' }]
         ).and_return(response)
